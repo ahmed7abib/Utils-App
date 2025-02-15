@@ -7,6 +7,7 @@ import android.content.Context.JOB_SCHEDULER_SERVICE
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
+import com.ahmed.habib.utils.R
 import androidx.compose.material.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -43,24 +44,17 @@ fun WorkManagerLayout() {
 
     val jobScheduler = context.getSystemService(JOB_SCHEDULER_SERVICE) as JobScheduler
 
-    CalendarDialog(state = calenderState,
-        config = CalendarConfig(
-            monthSelection = true,
-            yearSelection = true,
-            style = CalendarStyle.MONTH
-        ),
-        selection = CalendarSelection.Date { date ->
-            dateSelected = "${date.dayOfMonth}-${date.monthValue}-${date.year}"
-        }
-    )
+    CalendarDialog(state = calenderState, config = CalendarConfig(
+        monthSelection = true, yearSelection = true, style = CalendarStyle.MONTH
+    ), selection = CalendarSelection.Date { date ->
+        dateSelected = "${date.dayOfMonth}-${date.monthValue}-${date.year}"
+    })
 
-    ClockDialog(
-        state = clockState,
+    ClockDialog(state = clockState,
         config = ClockConfig(is24HourFormat = false),
         selection = ClockSelection.HoursMinutesSeconds { hours, min, sec ->
             timeSelected = "$hours:$min:$sec"
-        }
-    )
+        })
 
     Column(
         modifier = Modifier
@@ -123,12 +117,7 @@ fun WorkManagerLayout() {
 
                 val calendar = Calendar.getInstance()
                 calendar.set(
-                    2023,
-                    Calendar.SEPTEMBER,
-                    9,
-                    18,
-                    0,
-                    0
+                    2023, Calendar.SEPTEMBER, 9, 18, 0, 0
                 )
 
                 val delay = calendar.timeInMillis - System.currentTimeMillis()

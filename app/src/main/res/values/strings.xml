@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Utils</string>
+    <string name="accept_permissons">Open the app settings and accept all permissions</string>
+    <string name="open_gps">Open the device the (Location) / (GPS) to be able to use this feature!</string>
+    <string name="accept_all_permissions">Accept all permissions to be able to use this feature!</string>
+    <string name="accept_location_permis">You need to accept location permission to be able use this feature.</string>
+    <string name="open_camera_permission">To open the camera, You must accept the camera permission first!</string>
+    <string name="enter_with_this_format">Please enter your date with this format</string>
+    <string name="declare_alarm_first">Declare the alarm first !!</string>
+    <string name="no_alarm_found">No Alarm found to cancel it !!</string>
+    <string name="enter_date">You must enter date!</string>
+</resources>

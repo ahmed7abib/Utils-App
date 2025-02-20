@@ -1,6 +1,7 @@
 package com.ahmed.habib.utils
 
 import android.Manifest
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
@@ -17,6 +18,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ahmed.habib.utils.alarmManger.ui.AlarmManagerLayout
 import com.ahmed.habib.utils.broadcastReceiver.BroadCastScreen
 import com.ahmed.habib.utils.contentProvider.ui.ContentProviderScreen
+import com.ahmed.habib.utils.list_of_timers.ListOfTimersActivity
 import com.ahmed.habib.utils.pickImage.ui.PickCameraImageLayout
 import com.ahmed.habib.utils.pickImage.ui.PickImageLayout
 import com.ahmed.habib.utils.locationTracking.ui.LocationTrackingScreen
@@ -24,6 +26,11 @@ import com.ahmed.habib.utils.services.ServicesScreen
 import com.ahmed.habib.utils.workManager.ui.WorkManagerLayout
 
 class MainActivity : ComponentActivity() {
+
+    private val startTimerListActivity = {
+        val intent = Intent(this, ListOfTimersActivity::class.java)
+        startActivity(intent)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +49,10 @@ class MainActivity : ComponentActivity() {
                     startDestination = Screens.MainScreen.route,
                 ) {
                     composable(route = Screens.MainScreen.route) {
-                        MainScreen(navController, this@MainActivity)
+                        MainScreen(
+                            navController,
+                            navigateToTimerListActivity = startTimerListActivity
+                        )
                     }
 
                     composable(route = Screens.ServicesScreen.route) {

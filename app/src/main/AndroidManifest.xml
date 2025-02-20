@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
@@ -27,7 +26,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HabibUtils"
         tools:targetApi="31">
-
+        <activity
+            android:name=".list_of_timers.ListOfTimersActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -67,7 +68,6 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver android:name=".alarmManger.AlarmBroadcastReceiver" />
-
         <receiver
             android:name=".alarmManger.BootBroadcastReceiver"
             android:exported="false">
@@ -75,7 +75,6 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".broadcastReceiver.bootAndHeadReceiver.BootAndHeadSetReceiver"
             android:enabled="true"
@@ -85,7 +84,6 @@
                 <action android:name="android.intent.action.HEADSET_PLUG" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".broadcastReceiver.localNotification.NotificationReceiver" />
 
         <provider

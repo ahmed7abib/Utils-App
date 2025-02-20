@@ -9,4 +9,7 @@
     <string name="declare_alarm_first">Declare the alarm first !!</string>
     <string name="no_alarm_found">No Alarm found to cancel it !!</string>
     <string name="enter_date">You must enter date!</string>
+    <string name="date">Date: </string>
+    <string name="movies_list">Movies List</string>
+    <string name="now_playing">Now Playing!</string>
 </resources>

@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.ahmed.habib.utils'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.ahmed.habib.utils"
@@ -40,16 +40,6 @@ android {
     buildFeatures {
         compose true
     }
-
-        composeOptions {
-            kotlinCompilerExtensionVersion = "1.5.5"
-        }
-
-    //    packagingOptions {
-    //        resources {
-    //            excludes += '/META-INF/{AL2.0,LGPL2.1}'
-    //        }
-    //    }
 }
 
 dependencies {

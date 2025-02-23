@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Utils"
+rootProject.name = "UtilsApp"
 include ':app'
 include ':core'

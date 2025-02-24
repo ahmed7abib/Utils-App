@@ -96,12 +96,25 @@ class MoviesAdapter(private val movies: List<MovieModel>) :
             val hours = (timeInMillis / (1000 * 60 * 60)) % 24
             val days = (timeInMillis / (1000 * 60 * 60 * 24))
 
-            return when {
-                days > 0 -> "$days days, $hours hours"
-                hours > 0 -> "$hours hours, $minutes min"
-                minutes > 0 -> "$minutes min, $seconds sec"
-                else -> "$seconds sec"
+            val timeParts = mutableListOf<String>()
+
+            if (days > 0) {
+                timeParts.add("$days d")
             }
+
+            if (hours > 0) {
+                timeParts.add("$hours h")
+            }
+
+            if (minutes > 0) {
+                timeParts.add("$minutes min")
+            }
+
+            if (seconds > 0) {
+                timeParts.add("$seconds sec")
+            }
+
+            return timeParts.joinToString(", ")
         }
     }
 }

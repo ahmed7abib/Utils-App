@@ -60,20 +60,20 @@
             android:exported="false" />
 
         <service
-            android:name=".locationTracking.LocationService"
+            android:name=".location_tracking.LocationService"
             android:enabled="true"
             android:foregroundServiceType="location" />
 
         <service
-            android:name=".workManager.MyJobService"
+            android:name=".work_manager.MyJobService"
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name=".alarmManger.AlarmBroadcastReceiver" />
+        <receiver android:name=".alarm_manger.AlarmBroadcastReceiver" />
 
         <receiver
-            android:name=".alarmManger.BootBroadcastReceiver"
+            android:name=".alarm_manger.BootBroadcastReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -81,7 +81,7 @@
         </receiver>
 
         <receiver
-            android:name=".broadcastReceiver.bootAndHeadReceiver.BootAndHeadSetReceiver"
+            android:name=".broadcast_receiver.bootAndHeadReceiver.BootAndHeadSetReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -90,7 +90,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".broadcastReceiver.localNotification.NotificationReceiver" />
+        <receiver android:name=".broadcast_receiver.localNotification.NotificationReceiver" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

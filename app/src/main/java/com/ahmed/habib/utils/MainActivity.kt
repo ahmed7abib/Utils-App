@@ -15,15 +15,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.ahmed.habib.utils.alarmManger.ui.AlarmManagerLayout
-import com.ahmed.habib.utils.broadcastReceiver.BroadCastScreen
-import com.ahmed.habib.utils.contentProvider.ui.ContentProviderScreen
+import com.ahmed.habib.utils.alarm_manger.ui.AlarmManagerLayout
+import com.ahmed.habib.utils.broadcast_receiver.BroadCastScreen
+import com.ahmed.habib.utils.content_provider.ui.ContentProviderScreen
 import com.ahmed.habib.utils.list_of_timers.ListOfTimersActivity
-import com.ahmed.habib.utils.pickImage.ui.PickCameraImageLayout
-import com.ahmed.habib.utils.pickImage.ui.PickImageLayout
-import com.ahmed.habib.utils.locationTracking.ui.LocationTrackingScreen
+import com.ahmed.habib.utils.pick_image.ui.PickCameraImageLayout
+import com.ahmed.habib.utils.pick_image.ui.PickImageLayout
+import com.ahmed.habib.utils.location_tracking.ui.LocationTrackingScreen
 import com.ahmed.habib.utils.services.ServicesScreen
-import com.ahmed.habib.utils.workManager.ui.WorkManagerLayout
+import com.ahmed.habib.utils.work_manager.ui.WorkManagerLayout
 
 class MainActivity : ComponentActivity() {
 
